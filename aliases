@@ -1,0 +1,8 @@
+alias ipinfo="curl ipinfo.io"
+alias weather="curl wttr.in"
+
+# C++ Configs:
+# pedantic-errors - complain more often, 
+# Wall - Turn warning levels up, 
+# std - use the 2017 C++ standard
+alias g++="g++ -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion -Werror -std=c++17"
