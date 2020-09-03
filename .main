@@ -1,7 +1,7 @@
 export PATH=$(pwd):$PATH
 
-source .prompt
-source .aliases
+source ~/scripts/.prompt
+source ~/scripts/.aliases
 
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
