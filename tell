@@ -1,9 +1,0 @@
-#!/bin/bash
-
-tell () {
-  declare buf=$(argsorin "$*")
-  mark $md_plain "$buf"
-}
-
-tell "$@"
-
