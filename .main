@@ -1,5 +1,5 @@
-source prompt
-source aliases
+source .prompt
+source .aliases
 
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
