@@ -1,3 +1,5 @@
+export PATH=$(pwd):$PATH
+
 source .prompt
 source .aliases
 
@@ -7,3 +9,4 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # C-p to search files on command line and open in Vim
 bind -x '"\C-p": vim $(fzf);'
+
