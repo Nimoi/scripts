@@ -13,6 +13,13 @@ set directory=~/.vim/.swp//
 set backupdir=~/.vim/.backup//
 set undodir=~/.vim/.undo//
 
+" === Copy between panes ===
+" copy to buffer
+vmap <C-c> :w! ~/.vimbuffer<CR>
+nmap <C-c> :.w! ~/.vimbuffer<CR>
+" " paste from buffer
+map <C-p> :r ~/.vimbuffer<CR>
+
 " === Plugins ===
 
 " Install Plug
@@ -37,6 +44,14 @@ call plug#end()
 " FZF
 set rtp+=/usr/local/opt/fzf
 map <Leader>p :Files<CR>
+
+" RipGrep
+map <Leader>f :Rg<CR>
+
+" Commentary
+" C-_ maps to C-/
+" https://stackoverflow.com/a/9051932/698454
+nmap <C-_> :Commentary<CR>
 
 " Emmet
 let g:user_emmet_expandabbr_key='<Tab>'
