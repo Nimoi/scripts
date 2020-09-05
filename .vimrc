@@ -5,6 +5,7 @@ set nu
 set ruler
 
 set smarttab
+set expandtab
 set shiftwidth=4
 set tabstop=4
 set listchars=tab:▸\ ,eol:¬
@@ -15,10 +16,10 @@ set undodir=~/.vim/.undo//
 
 " === Copy between panes ===
 " copy to buffer
-vmap <C-c> :w! ~/.vimbuffer<CR>
-nmap <C-c> :.w! ~/.vimbuffer<CR>
+vmap <Leader>y :w! ~/.vimbuffer<CR>
+nmap <Leader>y :.w! ~/.vimbuffer<CR>
 " " paste from buffer
-map <C-p> :r ~/.vimbuffer<CR>
+map <Leader>p :r ~/.vimbuffer<CR>
 
 " === Plugins ===
 
@@ -30,23 +31,29 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-commentary'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
 Plug 'mattn/emmet-vim'
 Plug 'dense-analysis/ale'
+" FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" Language Server
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+" Commentary
+Plug 'tpope/vim-commentary'
+" Both these just to get JSX comments with Commentary
+Plug 'mxw/vim-jsx'
+Plug 'suy/vim-context-commentstring'
 call plug#end()
 
 " === Configs ===
 
 " FZF
 set rtp+=/usr/local/opt/fzf
-map <Leader>p :Files<CR>
+map <C-p> :Files<CR>
 
 " RipGrep
-map <Leader>f :Rg<CR>
+map <C-f> :Rg<CR>
 
 " Commentary
 " C-_ maps to C-/
