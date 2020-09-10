@@ -34,6 +34,19 @@ endif
 call plug#begin()
 Plug 'mattn/emmet-vim'
 Plug 'dense-analysis/ale'
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
+" Formatting
+Plug 'sbdchd/neoformat'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -49,17 +62,15 @@ call plug#end()
 
 " === Configs ===
 
+" Prettier
+map <Leader>= :Prettier<CR>
+
 " FZF
 set rtp+=/usr/local/opt/fzf
 map <C-p> :Files<CR>
 
 " RipGrep
 map <C-f> :Rg<CR>
-
-" Commentary
-" C-_ maps to C-/
-" https://stackoverflow.com/a/9051932/698454
-nmap <C-_> :Commentary<CR>
 
 " Emmet
 let g:user_emmet_expandabbr_key='<Tab>'
