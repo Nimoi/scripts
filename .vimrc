@@ -34,9 +34,13 @@ endif
 call plug#begin()
 Plug 'mattn/emmet-vim'
 Plug 'dense-analysis/ale'
+Plug 'preservim/nerdtree'
+Plug 'mg979/vim-visual-multi'
+" Autocompletion
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
+" Snippets
 Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
 " Formatting
