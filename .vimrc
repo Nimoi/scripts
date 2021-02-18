@@ -40,9 +40,6 @@ Plug 'mg979/vim-visual-multi'
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
-" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'mlaursen/vim-react-snippets'
 " Formatting
 Plug 'sbdchd/neoformat'
 Plug 'yuezk/vim-js'
